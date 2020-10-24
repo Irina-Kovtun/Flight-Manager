@@ -27,19 +27,4 @@ public class FlightManager {
         Arrays.sort(result);
         return result;
     }
-
-//            Arrays.sort(actual);
-//
-//            assertArrayEquals(expected, actual);
-//        }
-//            if (flight.matches(text)) {
-//                Flight[] tmp = new Flight[result.length + 1];
-//                System.arraycopy(result, 0, tmp, 0, result.length);
-//                tmp[tmp.length - 1] = flight;
-//                result = tmp;
-//            }
-//        }
-//        return result;
-//    }
 }
-//

@@ -32,6 +32,24 @@ public class FlightRepository {
         }
         return result;
     }
+
+    public void removeById(int id) {
+        int index = 0;
+        for (Flight item : items) {
+            if (item.getId() == id) {
+                int length = items.length - 1;
+                Flight[] tmp = new Flight[length];
+                for (Flight item2 : items) {
+                    if (item2.getId() != id) {
+                        tmp[index] = item2;
+                        index++;
+                    }
+                }
+                items = tmp;
+                return;
+            }
+        }
+    }
 }
 
 

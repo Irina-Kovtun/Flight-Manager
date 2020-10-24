@@ -24,6 +24,13 @@ class FlightManagerTest {
     }
 
     @Test
+    void shouldFindAll() {
+        Flight[] expected = new Flight[]{first, second, third, forth, fifth};
+        Flight[] actual = manager.getAll();
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
     void shouldSearchAndSortByAirports() {
         String from = "SVO";
         String to = "LAX";
@@ -31,4 +38,6 @@ class FlightManagerTest {
         Flight[] actual = manager.searchBy(from, to);
         assertArrayEquals(expected, actual);
     }
+
+
 }

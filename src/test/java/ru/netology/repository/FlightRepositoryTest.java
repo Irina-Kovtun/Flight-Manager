@@ -33,4 +33,21 @@ class FlightRepositoryTest {
         assertArrayEquals(expected, actual);
 
     }
+
+    @Test
+    void shouldRemoveByIdIfExist() {
+        int idToRemove = 4;
+        repository.removeById(idToRemove);
+        Flight[] expected = new Flight[]{first, second, third, fifth};
+        Flight[] actual = repository.findAll();
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    void shouldRemoveByIdIfNotExist() {
+        int idToRemove = 6;
+        repository.removeById(idToRemove);
+        Flight[] expected = new Flight[]{first, second, third, forth, fifth};
+        Flight[] actual = repository.findAll();
+        assertArrayEquals(expected, actual);
+    }
 }
