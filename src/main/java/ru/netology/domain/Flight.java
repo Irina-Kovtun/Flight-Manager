@@ -10,12 +10,13 @@ import lombok.NoArgsConstructor;
 public class Flight implements Comparable<Flight> {
     private int id;
     private int price;
-    private String departure;
-    private String arrival;
+    private String departure = "";
+    private String arrival = "";
     private int duration;
 
     @Override
     public int compareTo(Flight o) {
+
         return price - o.price;
     }
 }
